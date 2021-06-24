@@ -200,7 +200,7 @@
 }
 .calendar_gray:hover{
     cursor: not-allowed;
-    background-color: lightyellow;
+
 }
 
 .calendar_date_first{
@@ -272,7 +272,7 @@
     left: 0px;
     top: 0px;
     display: none;
-    background-color: lightyellow;
+    background-color: antiquewhite;
     width: 12%;
     height: 20%;
     border: 3px solid black;
@@ -284,6 +284,7 @@
     font: 20px;
     transition: all .3s ease;
     z-index: 3;
+    box-shadow: 1px 1px 1px 1px black;
 
 }
 #hover_date{
@@ -307,8 +308,8 @@
 }
 #hover_close{
     float: right;
-    margin-top:-5%;
-    margin-right:-5%;
+    margin-top:-6%;
+    margin-right:-6%;
     cursor:pointer;
     color: red;
     border: 3px solid black;
@@ -318,6 +319,9 @@
     font-weight: bold;
     line-height: 0px;
     padding: 11px 3px; 
+}
+#hover_close:hover{
+    box-shadow: 1px 1px 1px 1px black;
 }
 #hover_close:before{
     content: "X";
@@ -330,5 +334,218 @@
     z-index: 2;
     background-color: lightgray;
     opacity: 0.7
+
+}
+.weekly_overlay{
+    position: absolute;
+    left: 15%;
+    top: 40%;
+    display: none;
+    background-color: antiquewhite;
+    width: 70%;
+    height: 20%;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    font: 20px;
+    transition: all .3s ease;
+    z-index: 3;
+    box-shadow: 2px 2px 2px 2px black;
+}
+#weekly_close{
+    float: right;
+    margin-top:-1.5%;
+    margin-right:-1.5%;
+    cursor:pointer;
+    color: red;
+    border: 3px solid black;
+    border-radius: 50%;
+    background:white;
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 0px;
+    padding: 11px 3px; 
+}
+#weekly_close:hover{
+    box-shadow: 1px 1px 1px 1px black;
+}
+#weekly_close:before{
+    content: "X";
+}
+.weekly_grid_line_vertical{
+    position: absolute;
+    height: 100%;
+    border: 2px solid black;
+}
+#weekly_grid_line_vertical_1{
+    left: 8%;
+}
+#weekly_grid_line_vertical_2{
+    left: 18%;
+}
+#weekly_grid_line_vertical_3{
+    left: 29%;
+}
+#weekly_grid_line_vertical_4{
+    left: 40%;
+}
+#weekly_grid_line_vertical_5{
+    left: 51%;
+}
+#weekly_grid_line_vertical_6{
+    left: 62%;
+}
+#weekly_grid_line_vertical_7{
+    left: 73%;
+}
+#weekly_grid_line_vertical_8{
+    left: 84%;
+}
+#weekly_grid_line_horizontal_1{
+    position: absolute;
+    width: 100%;
+    border: 2px solid black;
+    top: 25%;
+}
+#weekly_grid_line_horizontal_2{
+    position: absolute;
+    width: 100%;
+    border: 2px solid black;
+    top: 60%;
+}
+.pay_item{
+    position: absolute;
+    list-style: none;
+
+}
+#weekly_sunday_text{
+    left: 10%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_monday_text{
+    left: 21%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_tuesday_text{
+    left: 32%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_wednesday_text{
+    left: 43%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_thursday_text{
+    left: 54%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_friday_text{
+    left: 65%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_saturday_text{
+    left: 76%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_total_text{
+    left: 87%;
+    top: 7%;
+    text-decoration: underline;
+}
+#weekly_hours_text{
+    left: 2%;
+    top: 38%;
+}
+#weekly_pay_text{
+    left: 2%;
+    top: 73%;
+}
+#weekly_sunday_hours{
+    left: 10%;
+    top: 38%;
+
+}
+#weekly_monday_hours{
+    left: 21%;
+    top: 38%;
+
+}
+#weekly_tuesday_hours{
+    left: 32%;
+    top: 38%;
+
+}
+#weekly_wednesday_hours{
+    left: 43%;
+    top: 38%;
+
+}
+#weekly_thursday_hours{
+    left: 54%;
+    top: 38%;
+
+}
+#weekly_friday_hours{
+    left: 65%;
+    top: 38%;
+
+}
+#weekly_saturday_hours{
+    left: 76%;
+    top: 38%;
+
+}
+#weekly_total_hours{
+    left: 87%;
+    top: 38%;
+
+}
+#weekly_sunday_pay{
+    left: 10%;
+    top: 73%;
+
+}
+#weekly_monday_pay{
+    left: 21%;
+    top: 73%;
+
+}
+#weekly_tuesday_pay{
+    left: 32%;
+    top: 73%;
+
+}
+#weekly_wednesday_pay{
+    left: 43%;
+    top: 73%;
+
+}
+#weekly_thursday_pay{
+    left: 54%;
+    top: 73%;
+
+}
+#weekly_friday_pay{
+    left: 65%;
+    top: 73%;
+
+}
+#weekly_saturday_pay{
+    left: 76%;
+    top: 73%;
+
+}
+#weekly_total_pay{
+    left: 87%;
+    top: 73%;
 
 }

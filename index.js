@@ -104,6 +104,10 @@ function closeHover(){
     document.getElementById("background_disabler").style.display = "none";
     document.getElementById("hover_overlay_box").style.display = "none";
 }
+function closeWeekly(){
+    document.getElementById("background_disabler").style.display = "none";
+    document.getElementById("weekly_overlay_box").style.display = "none";
+}
 
 function weeklySummary(event){
     let myRequest = new Request("./HOS log.json");
@@ -145,6 +149,10 @@ function weeklySummary(event){
         }
         weekly_pay = 0;
         weekly_hours = 0;
+        hours=0;
+        pay=0;
+        
+
         for(i=0; i<dates.length; i++){
             if(dates[i].innerHTML.length<2){
                 temp_date=date + "0" + dates[i].innerHTML; 
@@ -169,14 +177,54 @@ function weeklySummary(event){
                   if(weekly_hours>=0.8*70){
                       //code to warn about 70% of hours
                   }
-                  console.log(weekly_hours);
+           
+    
 
                 }
+
+
+            }
+            if(dates[i].classList.contains("sunday")){
+                document.getElementById("weekly_sunday_hours").innerHTML=hours;
+                document.getElementById("weekly_sunday_pay").innerHTML="$" + pay;
+            }
+            else if(dates[i].classList.contains("monday")){
+                document.getElementById("weekly_monday_hours").innerHTML=hours;
+                document.getElementById("weekly_monday_pay").innerHTML="$" + pay;
+
+            }
+            else if(dates[i].classList.contains("tuesday")){
+                document.getElementById("weekly_tuesday_hours").innerHTML=hours;
+                document.getElementById("weekly_tuesday_pay").innerHTML="$" + pay;
+
+            }
+            else if(dates[i].classList.contains("wednesday")){
+                document.getElementById("weekly_wednesday_hours").innerHTML=hours;
+                document.getElementById("weekly_wednesday_pay").innerHTML="$" + pay;
+
+            }
+            else if(dates[i].classList.contains("thursday")){
+                document.getElementById("weekly_thursday_hours").innerHTML=hours;
+                document.getElementById("weekly_thursday_pay").innerHTML="$" + pay;
+
+            }
+            else if(dates[i].classList.contains("friday")){
+                document.getElementById("weekly_friday_hours").innerHTML=hours;
+                document.getElementById("weekly_friday_pay").innerHTML="$" + pay;
+
+            }
+            else if(dates[i].classList.contains("saturday")){
+                document.getElementById("weekly_saturday_hours").innerHTML=hours;
+                document.getElementById("weekly_saturday_pay").innerHTML="$" + pay;
 
             }
 
         }
-        
+        document.getElementById("weekly_total_hours").innerHTML=total_hours;
+        document.getElementById("weekly_total_pay").innerHTML="$" + weekly_pay;
+
+        document.getElementById("weekly_overlay_box").style.display="block";
+        document.getElementById("background_disabler").style.display="block";
     
     })
 
