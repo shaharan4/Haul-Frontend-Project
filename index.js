@@ -1,25 +1,25 @@
 //function to read json file and store it in a variable
-window.onload = function getData(){
-    let myRequest = new Request("./HOS log.json");
-    fetch(myRequest)
-    .then(function(resp){
-        return resp.json();
-    })
-    .then(function(data){
-        console.log(data)
+// window.onload = function getData(){
+//     let myRequest = new Request("./HOS log.json");
+//     fetch(myRequest)
+//     .then(function(resp){
+//         return resp.json();
+//     })
+//     .then(function(data){
+//         console.log(data)
 
-        //store the driver data in a single array that contains each trip
-        driver_data = [];
-        count = 0;
-        for( i=0; i<data.length; i++){
-            for(j=0; j<data[i].data.length; j++){
-                driver_data.push(data[i].data[j]);
-            }
-        }
-        console.log(driver_data);
-    })
+//         //store the driver data in a single array that contains each trip
+//         driver_data = [];
+//         count = 0;
+//         for( i=0; i<data.length; i++){
+//             for(j=0; j<data[i].data.length; j++){
+//                 driver_data.push(data[i].data[j]);
+//             }
+//         }
+//         console.log(driver_data);
+//     })
 
-}
+// }
 
 
 function showWork(event){
@@ -69,21 +69,42 @@ function showWork(event){
             
               hours = (hours < 10 ) ? "0" + hours : hours;
               minutes = (minutes < 10) ? "0" + minutes : minutes;
-              total_hours = (parseInt(hours) + parseInt((minutes))/60).toFixed(2);
-              pay = total_hours*22;
+              total_hours = (parseFloat(hours) + parseFloat((minutes))/60).toFixed(2);
+              pay = parseFloat(total_hours)*22;
             }
  
         }
-        if(typeof total_hours!="undefined"){
-            console.log(total_hours);
-        }
 
-        if(typeof pay!="undefined"){
-            console.log(pay);
-        }     
+            var x = document.getElementById("hover_overlay_box")
+            var y = document.getElementById("background_disabler");
+                y.style.display ="block";
+                x.style.display="block";
+                var cX = event.clientX;
+                var sX = event.screenX;
+                var cY = event.clientY;
+                var sY = event.screenY;
+         
+                x.style.left = (cX-40)+"px";
+                x.style.top = (cY-40)+"px";
+                document.getElementById("hover_date").innerHTML = "Date: " + date;
+                if(typeof total_hours!=="undefined"){
+                    document.getElementById("hover_hours").innerHTML = "Total Hours: " + total_hours;
+                    document.getElementById("hover_income").innerHTML = "Income Earned: $" + pay.toFixed(2);
+                }
+                else{
+                    document.getElementById("hover_hours").innerHTML = "Total Hours: 0.00"; 
+                    document.getElementById("hover_income").innerHTML = "Income Earned: $0.00";
+                }
+   
         
     })
 }
+
+function closeHover(){
+    document.getElementById("background_disabler").style.display = "none";
+    document.getElementById("hover_overlay_box").style.display = "none";
+}
+
 function weeklySummary(event){
     let myRequest = new Request("./HOS log.json");
     fetch(myRequest)
@@ -91,9 +112,7 @@ function weeklySummary(event){
         return resp.json();
     })
     .then(function(data){
-        console.log(data)
-
-        //store the driver data in a single array that contains each trip
+      //store the driver data in a single array that contains each trip
         driver_data = [];
         for( i=0; i<data.length; i++){
             for(j=0; j<data[i].data.length; j++){
@@ -144,6 +163,14 @@ function weeklySummary(event){
                   pay = total_hours*22;
                   weekly_hours = weekly_hours + parseFloat(total_hours);
                   weekly_pay = weekly_pay + pay;
+                  if(weekly_hours>40){
+                      weekly_pay=(40*22) + (weekly_hours-40)*33;
+                  }
+                  if(weekly_hours>=0.8*70){
+                      //code to warn about 70% of hours
+                  }
+                  console.log(weekly_hours);
+
                 }
 
             }

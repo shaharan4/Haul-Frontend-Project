@@ -266,3 +266,69 @@
     height: 12%;
     top: 80%;
 }
+
+.hover_overlay{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+    background-color: lightyellow;
+    width: 12%;
+    height: 20%;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    font: 20px;
+    transition: all .3s ease;
+    z-index: 3;
+
+}
+#hover_date{
+    list-style: none;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+}
+#hover_hours{
+    list-style: none;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+#hover_income{
+    list-style: none;
+    position: absolute;
+    top: 70%;
+    left: 5%;
+}
+#hover_close{
+    float: right;
+    margin-top:-5%;
+    margin-right:-5%;
+    cursor:pointer;
+    color: red;
+    border: 3px solid black;
+    border-radius: 50%;
+    background:white;
+    font-size: 31px;
+    font-weight: bold;
+    line-height: 0px;
+    padding: 11px 3px; 
+}
+#hover_close:before{
+    content: "X";
+}
+#background_disabler{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: lightgray;
+    opacity: 0.7
+
+}
