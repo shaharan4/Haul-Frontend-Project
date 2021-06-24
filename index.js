@@ -175,7 +175,7 @@ function weeklySummary(event){
                       weekly_pay=(40*22) + (weekly_hours-40)*33;
                   }
                   if(weekly_hours>=0.8*70){
-                      //code to warn about 70% of hours
+                      window.alert("80% of maximum allowed hours (70) reached.");
                   }
            
     
