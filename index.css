@@ -3,5 +3,266 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: lightgray;
+    background-color: snow;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 50px;
+    background-color: antiquewhite;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid navy
+
+}
+
+.calendar{
+    position: absolute;;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 30%;
+    height: 70%;
+    background-color: lightskyblue;
+    border: 2px solid navy;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#january_calendar{
+    left: 1%;
+}
+#february_calendar{
+    left: 33%;
+    background-color: lightpink;
+}
+
+#march_calendar{
+    left :65%;
+    background-color: lightgreen;
+}
+#january_month_year{
+    position: absolute;
+    background: linear-gradient(lightskyblue, white);
+    width: 100%;
+    height: 15%;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+}
+#february_month_year{
+    position: absolute;
+    background: linear-gradient(lightpink, white);
+    width: 100%;
+    height: 15%;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+}
+#march_month_year{
+    position: absolute;
+    background: linear-gradient(lightgreen, white);
+    width: 100%;
+    height: 15%;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.calendar_days{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 5%;
+    top: 15%;
+}
+
+.calendar_day{
+    position: absolute;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 12px;
+    width: 12%;
+    height: 100%;
+    border: 1px solid navy;
+}
+
+.weekly_summary_text{
+    position: absolute;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Brush Script MT', cursive;
+    font-style: italic;
+    color: purple;
+    font: 20px;
+    width: 16%;
+    height: 100%;
+    border: 1px solid navy;
+    left: 84%;
+    text-decoration: underline;    
+}
+
+.weekly_summary_text:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    box-shadow: 2px 2px 2px 2px navy;
+}
+
+
+#sunday_text{
+    position: absolute;
+    text-align: center;
+    left: 0%;
+
+}
+
+#monday_text{
+    left: 12%;
+}
+
+#tuesday_text{
+    left: 24%;
+}
+
+#wednesday_text{
+    left: 36%;
+}
+
+#thursday_text{
+    left: 48%;
+}
+
+#friday_text{
+    left: 60%;
+}
+
+#saturday_text{
+
+    left: 72%;
+}
+
+.calendar_date{
+    position: absolute;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    font: 20px;
+    width: 12%;
+    height: 100%;
+    border: 1px solid navy;
+}
+
+.calendar_date:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    box-shadow: 2px 2px 2px 2px navy;
+    background-color: lightyellow;
+}
+.calendar_gray{
+    color: darkgray;
+    position: absolute;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    font: 20px;
+    width: 12%;
+    height: 100%;
+    border: 1px solid navy;
+
+}
+.calendar_gray:hover{
+    cursor: not-allowed;
+    background-color: lightyellow;
+}
+
+.calendar_date_first{
+    left: 0%;
+}
+.calendar_date_second{
+    left: 12%;
+}
+.calendar_date_third{
+    left: 24%;
+}
+.calendar_date_fourth{
+    left: 36%;
+}
+.calendar_date_fifth{
+    left: 48%;
+}
+.calendar_date_sixth{
+    left: 60%;
+}
+.calendar_date_seventh{
+    left: 72%;
+}
+.first_row{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 12%;
+    top: 20%;
+}
+.second_row{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 12%;
+    top: 32%;
+}
+.third_row{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 12%;
+    top: 44%;
+}
+.fourth_row{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 12%;
+    top: 56%;
+}
+.fifth_row{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 12%;
+    top: 68%;
+}
+.sixth_row{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 12%;
+    top: 80%;
 }
