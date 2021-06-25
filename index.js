@@ -167,7 +167,7 @@ function weeklySummary(event){
                 
                   hours = (hours < 10 ) ? "0" + hours : hours;
                   minutes = (minutes < 10) ? "0" + minutes : minutes;
-                  total_hours = (parseInt(hours) + parseInt((minutes))/60).toFixed(2);
+                  total_hours = (parseFloat(hours) + parseFloat((minutes))/60).toFixed(2);
                   pay = total_hours*22;
                   weekly_hours = weekly_hours + parseFloat(total_hours);
                   weekly_pay = weekly_pay + pay;
@@ -184,43 +184,44 @@ function weeklySummary(event){
 
 
             }
+
             if(dates[i].classList.contains("sunday")){
-                document.getElementById("weekly_sunday_hours").innerHTML=hours;
+                document.getElementById("weekly_sunday_hours").innerHTML=total_hours;
                 document.getElementById("weekly_sunday_pay").innerHTML="$" + pay;
             }
             else if(dates[i].classList.contains("monday")){
-                document.getElementById("weekly_monday_hours").innerHTML=hours;
+                document.getElementById("weekly_monday_hours").innerHTML=total_hours;
                 document.getElementById("weekly_monday_pay").innerHTML="$" + pay;
 
             }
             else if(dates[i].classList.contains("tuesday")){
-                document.getElementById("weekly_tuesday_hours").innerHTML=hours;
+                document.getElementById("weekly_tuesday_hours").innerHTML=total_hours;
                 document.getElementById("weekly_tuesday_pay").innerHTML="$" + pay;
 
             }
             else if(dates[i].classList.contains("wednesday")){
-                document.getElementById("weekly_wednesday_hours").innerHTML=hours;
+                document.getElementById("weekly_wednesday_hours").innerHTML=total_hours;
                 document.getElementById("weekly_wednesday_pay").innerHTML="$" + pay;
 
             }
             else if(dates[i].classList.contains("thursday")){
-                document.getElementById("weekly_thursday_hours").innerHTML=hours;
+                document.getElementById("weekly_thursday_hours").innerHTML=total_hours;
                 document.getElementById("weekly_thursday_pay").innerHTML="$" + pay;
 
             }
             else if(dates[i].classList.contains("friday")){
-                document.getElementById("weekly_friday_hours").innerHTML=hours;
+                document.getElementById("weekly_friday_hours").innerHTML=total_hours;
                 document.getElementById("weekly_friday_pay").innerHTML="$" + pay;
 
             }
             else if(dates[i].classList.contains("saturday")){
-                document.getElementById("weekly_saturday_hours").innerHTML=hours;
+                document.getElementById("weekly_saturday_hours").innerHTML=total_hours;
                 document.getElementById("weekly_saturday_pay").innerHTML="$" + pay;
 
             }
 
         }
-        document.getElementById("weekly_total_hours").innerHTML=total_hours;
+        document.getElementById("weekly_total_hours").innerHTML=weekly_hours;
         document.getElementById("weekly_total_pay").innerHTML="$" + weekly_pay;
 
         document.getElementById("weekly_overlay_box").style.display="block";
